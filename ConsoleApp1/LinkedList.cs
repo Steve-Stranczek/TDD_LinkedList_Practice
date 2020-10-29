@@ -7,9 +7,11 @@ namespace ConsoleApp1
     public class LinkedList
     {
         private int numOfElements = 0;
+        private LinkedListNode head;
+
         public LinkedList()
         {
-
+            head = null;
         }
 
         public bool IsEmpty()
@@ -17,8 +19,18 @@ namespace ConsoleApp1
             return numOfElements == 0;
         }
 
-        public void Insert(int element)
+        public void Push(int element)
         {
+            LinkedListNode newNode = new LinkedListNode(element);
+            if(head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.SetNextNode(head);
+                head = newNode;
+            }
             numOfElements++;
         }
 
@@ -34,7 +46,35 @@ namespace ConsoleApp1
 
         public int Count()
         {
-            return  numOfElements;
+            return numOfElements;
+        }
+
+
+    }
+
+    public class LinkedListNode
+    {
+        private int Value;
+        private LinkedListNode Next;
+
+        public LinkedListNode(int value)
+        {
+
+        }
+
+        public void SetNextNode(LinkedListNode nextNode)
+        {
+            this.Next = nextNode;
+        }
+
+        public int GetValue()
+        {
+            return this.Value;
+        }
+
+        public LinkedListNode getNextNode()
+        {
+            return this.Next;
         }
 
     }

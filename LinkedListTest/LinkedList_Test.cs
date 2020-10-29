@@ -6,7 +6,7 @@ using NuGet.Frameworks;
 
 namespace LinkedListTest
 {
-    public class UnitTest1
+    public class LinkedList_Test
     {
         private LinkedList myList = new LinkedList();
 
@@ -17,52 +17,70 @@ namespace LinkedListTest
         }
 
         [Fact]
-        public void InsertIntoLinkedList()
+        public void PushLinkedList()
         {
-            myList.Insert(0);
+            myList.Push(0);
             Assert.False(myList.IsEmpty());
         }
 
         [Fact]
-        public void InsertXRemoveX_ShouldBeEmpty()
+        public void PushXRemoveX_ShouldBeEmpty()
         {
-            myList.Insert(0);
+            myList.Push(0);
             myList.Remove(0);
             Assert.True(myList.IsEmpty());
         }
 
         [Fact]
-        public void InsertXandY_RemoveY_ShuoldNotBeEmpty()
+        public void PushXandY_RemoveY_ShuoldNotBeEmpty()
         {
-            myList.Insert(0);
-            myList.Insert(1);
+            myList.Push(0);
+            myList.Push(1);
             myList.Remove(1);
             Assert.False(myList.IsEmpty());
         }
 
         [Fact]
-        public void InsertX_CheckIfmyListContainsX()
+        public void PushX_CheckIfmyListContainsX()
         {
-            myList.Insert(0);
+            myList.Push(0);
             Assert.True(myList.Contains(0));
         }
 
         [Fact]
-        public void InsertX_CountShouldBe1()
+        public void PushX_CountShouldBe1()
         {
-            myList.Insert(0);
+            myList.Push(0);
             bool resultOfCount = myList.Count() == 1;
             Assert.True(resultOfCount);
         }
 
         [Fact]
-        public void InsertX_RemoveX_CountShouldBe0()
+        public void PushX_RemoveX_CountShouldBe0()
         {
-            myList.Insert(0);
+            myList.Push(0);
             myList.Remove(0);
             bool resultOfCount = myList.Count() == 0;
 
             Assert.True(resultOfCount);
         }
+
+        [Fact]
+        public void PushX_XShouldBeHeadOfList()
+        {
+            myList.Push(0);
+            bool compareHeadToX = myList.Head.GetValue() == 0;
+        }
+
+        [Fact]
+        public void CreateNode_ValueShouldBeValuePassed()
+        {
+            LinkedListNode node = new LinkedListNode(0);
+            bool resultOfValueComparison = node.GetValue() == 0;
+
+            Assert.True(resultOfValueComparison);
+        }
+
+        
     }
 }
