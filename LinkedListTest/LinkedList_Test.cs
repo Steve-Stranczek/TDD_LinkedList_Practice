@@ -66,6 +66,13 @@ namespace LinkedListTest
         }
 
         [Fact]
+        public void GetHead_ShuoldReturnNullIfNothingIn()
+        {
+            bool HeadSHouldBeNull = myList.GetHead() == null;
+            Assert.True(HeadSHouldBeNull);
+        }
+
+        [Fact]
         public void PushX_HeadOfListShouldHaveValueX()
         {
             myList.Push(0);
@@ -96,6 +103,24 @@ namespace LinkedListTest
             Assert.True(resultOfValueComparison);
         }
 
+        [Fact]
+        public void InsertAtEnd_ShouldBeHeadIfEmpty()
+        {          
+            myList.InsertAtEnd(0);
+            bool CheckIfNewNodeIsHead = myList.GetHead().GetValue() == 0;
+
+            Assert.True(CheckIfNewNodeIsHead);
+        }
+
+        [Fact]
+        public void InsertXandYatEnd_XShouldBeHead()
+        {
+            myList.InsertAtEnd(0);
+            myList.InsertAtEnd(1);
+
+            bool CheckIfNewNodeIsHead = myList.GetHead().GetValue() == 0;
+            Assert.True(CheckIfNewNodeIsHead);
+        }
         
     }
 }

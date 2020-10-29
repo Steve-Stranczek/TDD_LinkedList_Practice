@@ -54,7 +54,14 @@ namespace ConsoleApp1
             return numOfElements;
         }
 
-
+        public void InsertAtEnd(int element)
+        {
+            if(this.Head == null)
+            {
+                this.Head = new LinkedListNode(element);
+            }
+            
+        }
     }
 
     public class LinkedListNode
