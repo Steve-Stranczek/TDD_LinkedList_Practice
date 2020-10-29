@@ -1,0 +1,1 @@
+ConsoleApp1/.vs/ConsoleApp1/v16/TestStore/0/001.testlog
