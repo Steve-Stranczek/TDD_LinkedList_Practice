@@ -23,6 +23,8 @@ namespace LinkedListClass
         public void InsertAfter(LinkedListNode nodeToInsertAfter, int element);
 
         public LinkedListNode GetLastValue();
+
+        public LinkedListNode GetNodeByValue(int element);
         
     }
 }

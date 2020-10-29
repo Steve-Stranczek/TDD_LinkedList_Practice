@@ -6,6 +6,7 @@ namespace LinkedListClass
 {
     public class LinkedList : ILinkedList
     {
+        //This linked list can only contain one of each element
         private int numOfElements = 0;
         private LinkedListNode Head;
 
@@ -30,23 +31,63 @@ namespace LinkedListClass
             if(Head == null)
             {
                 Head = newNode;
+                numOfElements++;
             }
             else
             {
-                newNode.SetNextNode(Head);
-                Head = newNode;
+                if (!Contains(element))
+                {
+                    newNode.SetNextNode(Head);
+                    Head = newNode; 
+                    numOfElements++;
+                }
             }
-            numOfElements++;
+           
         }
 
         public void Remove(int element)
         {
-            numOfElements--;
+            LinkedListNode traversalNode = Head;
+            LinkedListNode previous = Head;
+            while (traversalNode != null)
+            {
+                if (traversalNode.GetValue() == element)
+                {
+                    if (traversalNode == this.Head)
+                    {
+                        Head = Head.getNextNode();
+                    }
+                    else
+                    {
+                        previous.SetNextNode(traversalNode.getNextNode());
+                    }
+                    numOfElements--;
+                }
+                previous = traversalNode;
+                traversalNode = traversalNode.getNextNode();
+            }
         }
 
         public bool Contains(int element)
         {
-            return true;
+            if (numOfElements == 0)
+            {
+                return false;
+            }
+            else
+            { 
+                LinkedListNode traversalNode = Head;
+                while (traversalNode != null)
+                {
+                    if(traversalNode.GetValue() == element)
+                    {
+                        return true;
+                    }
+                    traversalNode = traversalNode.getNextNode();
+                }
+                return false;
+            }
+
         }
 
         public int Count()
@@ -84,7 +125,20 @@ namespace LinkedListClass
                 }
                 return traversalNode;
             }
+        }
 
+        public LinkedListNode GetNodeByValue(int element)
+        {
+            LinkedListNode traversalNode = Head;
+            while (traversalNode != null)
+            {
+                if (traversalNode.GetValue() == element)
+                {
+                    return traversalNode;
+                }
+                traversalNode = traversalNode.getNextNode();
+            }
+            return null;
         }
     }
 

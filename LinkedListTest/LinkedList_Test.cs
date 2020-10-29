@@ -56,6 +56,15 @@ namespace LinkedListTest
         }
 
         [Fact]
+        public void PushXInEmptyList_CallGetNodeByValue_ShouldBeHead()
+        {
+            myList.Push(0);
+            LinkedListNode zeroNode = myList.GetNodeByValue(0);
+
+            Assert.True(zeroNode == myList.GetHead());
+        }
+
+        [Fact]
         public void PushX_RemoveX_CountShouldBe0()
         {
             myList.Push(0);
@@ -64,9 +73,18 @@ namespace LinkedListTest
 
             Assert.True(myList.Count() == 0);
         }
+        
+        [Fact]
+        public void PushXTwice_CountShouldBe1()
+        {
+            myList.Push(0);
+            myList.Push(0);
+
+            Assert.True(myList.Count() == 1);
+        }
 
         [Fact]
-        public void GetHead_ShuoldReturnNullIfNothingIn()
+        public void GetHead_ShouldReturnNullIfNothingIn()
         {
             Assert.True(myList.GetHead() == null);
         }
@@ -140,5 +158,35 @@ namespace LinkedListTest
             Assert.False(myList.GetHead() == myList.GetLastValue());
         }
         
+        [Fact]
+        public void PushX_ThenInsertAtEndY_ThenRemoveX_HeadShouldBeY()
+        {
+            myList.Push(0);
+            myList.InsertAtEnd(1);
+            myList.Remove(0);
+            Assert.True(myList.GetHead().GetValue() == 1);
+        }
+
+        [Fact]
+        public void PushX_RemoveX_HeadShouldBeNull()
+        {
+            myList.Push(0);
+            myList.Remove(0);
+
+            Assert.True(myList.GetHead() == null);
+        }
+
+        [Fact]
+        public void GetNodeByValueOnEmptyList_ShouldBeNull()
+        {
+            Assert.True(myList.GetNodeByValue(0) == null);
+        }
+
+        [Fact]
+        public void GetNodeByValueAfterInsert_ShouldBeHead()
+        {
+            myList.Push(0);
+            Assert.True(myList.GetHead() == myList.GetNodeByValue(0));
+        }
     }
 }
