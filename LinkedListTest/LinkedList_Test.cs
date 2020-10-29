@@ -32,7 +32,7 @@ namespace LinkedListTest
         }
 
         [Fact]
-        public void PushXandY_RemoveY_ShuoldNotBeEmpty()
+        public void PushXandY_RemoveY_ShouldNotBeEmpty()
         {
             myList.Push(0);
             myList.Push(1);
@@ -72,6 +72,19 @@ namespace LinkedListTest
             bool compareHeadToX = myList.GetHead().GetValue() == 0;
 
             Assert.True(compareHeadToX);
+        }
+
+        [Fact]
+        public void PushX_ThenY_YNextShouldBeX()
+        {
+            myList.Push(0);
+            LinkedListNode x = myList.GetHead();
+            myList.Push(1);
+            LinkedListNode y = myList.GetHead();
+
+            bool CheckYNextEqualsX = y.getNextNode() == x;
+
+            Assert.True(CheckYNextEqualsX);
         }
 
         [Fact]
