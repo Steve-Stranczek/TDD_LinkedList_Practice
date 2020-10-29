@@ -66,10 +66,12 @@ namespace LinkedListTest
         }
 
         [Fact]
-        public void PushX_XShouldBeHeadOfList()
+        public void PushX_HeadOfListShouldHaveValueX()
         {
             myList.Push(0);
-            bool compareHeadToX = myList.Head.GetValue() == 0;
+            bool compareHeadToX = myList.GetHead().GetValue() == 0;
+
+            Assert.True(compareHeadToX);
         }
 
         [Fact]
