@@ -47,6 +47,7 @@ namespace LinkedListClass
 
         public void Remove(int element)
         {
+
             LinkedListNode traversalNode = Head;
             LinkedListNode previous = Head;
             while (traversalNode != null)

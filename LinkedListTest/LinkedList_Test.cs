@@ -70,7 +70,6 @@ namespace LinkedListTest
             myList.Push(0);
             myList.Remove(0);
 
-
             Assert.True(myList.Count() == 0);
         }
         
@@ -104,8 +103,6 @@ namespace LinkedListTest
             LinkedListNode x = myList.GetHead();
             myList.Push(1);
             LinkedListNode y = myList.GetHead();
-
-
 
             Assert.True(y.getNextNode() == x);
         }
@@ -187,6 +184,17 @@ namespace LinkedListTest
         {
             myList.Push(0);
             Assert.True(myList.GetHead() == myList.GetNodeByValue(0));
+        }
+
+        [Fact]
+        public void InsertAtNodeAfterHead_ShouldBeHeadNext()
+        {
+            myList.Push(0);
+            LinkedListNode headNode = myList.GetHead();
+            myList.InsertAfter(headNode, 1);
+            LinkedListNode nodeInsertedAfter = myList.GetNodeByValue(1);
+            Assert.True(headNode.getNextNode() == nodeInsertedAfter);
+
         }
     }
 }
