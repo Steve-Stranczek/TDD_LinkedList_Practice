@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R5N9SGuyeNs+1RkT/gSfE4A2zDPpZCC0Z4eU6wrmRm/t41VT8BTLG2+mMhrJv/xV34XR37kzrKLVP1nhgxGdfg==",
+  "dgSpecHash": "Dyzgn4Ies/mKg/0mBqwHOtNeoqBT9iXlODuaKRtvY9UnrDQK++fdg6kjNwBpKZUI3sd6odcCaT94J1w+4LrkLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

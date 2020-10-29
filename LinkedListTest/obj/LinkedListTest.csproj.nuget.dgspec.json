@@ -4,12 +4,12 @@
     "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\LinkedListTest\\LinkedListTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj",
-        "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj",
+        "projectName": "LinkedListClass",
+        "projectPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj",
         "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj": {
-                "projectPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj"
+              "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj": {
+                "projectPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj"
               }
             }
           }

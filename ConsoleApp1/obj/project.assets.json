@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj",
+      "projectName": "LinkedListClass",
+      "projectPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\LinkedListClass.csproj",
       "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Steve\\source\\repos\\TDD_LinkedList\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",

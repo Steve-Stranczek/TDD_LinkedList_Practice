@@ -1,0 +1,9 @@
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\bin\Debug\netcoreapp3.1\LinkedListClass.deps.json
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\bin\Debug\netcoreapp3.1\LinkedListClass.dll
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\bin\Debug\netcoreapp3.1\LinkedListClass.pdb
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\obj\Debug\netcoreapp3.1\LinkedListClass.csprojAssemblyReference.cache
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\obj\Debug\netcoreapp3.1\LinkedListClass.AssemblyInfoInputs.cache
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\obj\Debug\netcoreapp3.1\LinkedListClass.AssemblyInfo.cs
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\obj\Debug\netcoreapp3.1\LinkedListClass.csproj.CoreCompileInputs.cache
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\obj\Debug\netcoreapp3.1\LinkedListClass.dll
+C:\Users\Steve\source\repos\TDD_LinkedList\ConsoleApp1\obj\Debug\netcoreapp3.1\LinkedListClass.pdb
