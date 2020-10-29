@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using ConsoleApp1;
+using LinkedListClass;
 using System.Threading.Tasks;
 using NuGet.Frameworks;
 
@@ -51,8 +51,8 @@ namespace LinkedListTest
         public void PushX_CountShouldBe1()
         {
             myList.Push(0);
-            bool resultOfCount = myList.Count() == 1;
-            Assert.True(resultOfCount);
+
+            Assert.True(myList.Count() == 1);
         }
 
         [Fact]
@@ -60,25 +60,23 @@ namespace LinkedListTest
         {
             myList.Push(0);
             myList.Remove(0);
-            bool resultOfCount = myList.Count() == 0;
 
-            Assert.True(resultOfCount);
+
+            Assert.True(myList.Count() == 0);
         }
 
         [Fact]
         public void GetHead_ShuoldReturnNullIfNothingIn()
         {
-            bool HeadSHouldBeNull = myList.GetHead() == null;
-            Assert.True(HeadSHouldBeNull);
+            Assert.True(myList.GetHead() == null);
         }
 
         [Fact]
         public void PushX_HeadOfListShouldHaveValueX()
         {
             myList.Push(0);
-            bool compareHeadToX = myList.GetHead().GetValue() == 0;
 
-            Assert.True(compareHeadToX);
+            Assert.True(myList.GetHead().GetValue() == 0);
         }
 
         [Fact]
@@ -89,27 +87,25 @@ namespace LinkedListTest
             myList.Push(1);
             LinkedListNode y = myList.GetHead();
 
-            bool CheckYNextEqualsX = y.getNextNode() == x;
 
-            Assert.True(CheckYNextEqualsX);
+
+            Assert.True(y.getNextNode() == x);
         }
 
         [Fact]
         public void CreateNode_ValueShouldBeValuePassed()
         {
             LinkedListNode node = new LinkedListNode(0);
-            bool resultOfValueComparison = node.GetValue() == 0;
-
-            Assert.True(resultOfValueComparison);
+       
+            Assert.True(node.GetValue() == 0);
         }
 
         [Fact]
         public void InsertAtEnd_ShouldBeHeadIfEmpty()
         {          
             myList.InsertAtEnd(0);
-            bool CheckIfNewNodeIsHead = myList.GetHead().GetValue() == 0;
-
-            Assert.True(CheckIfNewNodeIsHead);
+        
+            Assert.True(myList.GetHead().GetValue() == 0);
         }
 
         [Fact]
@@ -118,8 +114,30 @@ namespace LinkedListTest
             myList.InsertAtEnd(0);
             myList.InsertAtEnd(1);
 
-            bool CheckIfNewNodeIsHead = myList.GetHead().GetValue() == 0;
-            Assert.True(CheckIfNewNodeIsHead);
+    
+            Assert.True(myList.GetHead().GetValue() == 0);
+        }
+
+        [Fact]
+        public void GetLastValueOnEmptyListShouldBeNull()
+        {
+            Assert.True(myList.GetLastValue() == null);
+        }
+
+        [Fact]
+        public void InsertAtEndOnEmptyList_LastValueShouldBeHead()
+        {
+            myList.InsertAtEnd(0);
+
+            Assert.True(myList.GetHead() == myList.GetLastValue());
+        }
+        
+        [Fact]
+        public void PushX_ThenInsertAtEndY_LastValueShouldNotBeHead()
+        {
+            myList.Push(0);
+            myList.InsertAtEnd(1);
+            Assert.False(myList.GetHead() == myList.GetLastValue());
         }
         
     }

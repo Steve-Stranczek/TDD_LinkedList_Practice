@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedListClass
 {
-    public class LinkedList
+    public class LinkedList : ILinkedList
     {
         private int numOfElements = 0;
         private LinkedListNode Head;
@@ -60,7 +60,31 @@ namespace LinkedListClass
             {
                 this.Head = new LinkedListNode(element);
             }
-            
+            else
+            {
+                LinkedListNode CurrentLastValue = GetLastValue();
+                CurrentLastValue.SetNextNode(new LinkedListNode(element));
+            }
+        }
+
+        public void InsertAfter(LinkedListNode nodeToInsertAfter, int element)
+        {
+            throw new NotImplementedException();
+        }
+
+        public LinkedListNode GetLastValue()
+        {
+            if (Head == null) return null;
+            else
+            {
+                LinkedListNode traversalNode = Head;
+                while (traversalNode.getNextNode() != null)
+                {
+                    traversalNode = traversalNode.getNextNode();
+                }
+                return traversalNode;
+            }
+
         }
     }
 
@@ -72,6 +96,7 @@ namespace LinkedListClass
         public LinkedListNode(int value)
         {
             this.Value = value;
+            Next = null;
         }
 
         public void SetNextNode(LinkedListNode nextNode)
